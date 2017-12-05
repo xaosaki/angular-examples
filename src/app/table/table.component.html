@@ -1,0 +1,11 @@
+{{order}}
+<table>
+  <tr>
+    <th *ngFor="let title of titles">{{title}} <button (click)="sort(title)">Нажми</button></th>
+  </tr>
+  <tr *ngFor="let i of data">
+    <td *ngFor="let title of titles">{{i[title]}} </td>
+  </tr>
+</table>
+
+<button *ngFor="let n of pageArray; let index = index" (click)="setPage(index)">{{index}}</button>
